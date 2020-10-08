@@ -1,7 +1,7 @@
 name: "Label Issues"
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
 
 jobs:
   test:
@@ -10,5 +10,5 @@ jobs:
       - uses: Naturalclar/issue-action@v2.0.2
         with:
           title-or-body: "title"
-          parameters: '[ { "keywords": ["idea"], "labels": ["idea"], "assignees": [] } ]'
+          parameters: '[ { "keywords": ["functionality"], "labels": ["functionality"], "assignees": [] }, { "keywords": ["fun"], "labels": ["fun"], "assignees": [] }, { "keywords": ["patch"], "labels": ["patch"], "assignees": [] }, { "keywords": ["ricing"], "labels": ["ricing"], "assignees": [] } ]'
           github-token: "${{ secrets.GITHUB_TOKEN }}"
