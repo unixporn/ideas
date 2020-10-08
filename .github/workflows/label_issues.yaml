@@ -1,0 +1,14 @@
+name: "Label Issues"
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Naturalclar/issue-action@v2.0.2
+        with:
+          title-or-body: "title"
+          parameters: '[ { "keywords": ["idea"], "labels": ["idea"], "assignees": [] } ]'
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
